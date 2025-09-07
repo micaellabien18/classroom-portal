@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	  <link href="../media/favicon.ico" rel="icon">
+	  <title>Educational Website</title>
+	  <link href="../style.css" rel="stylesheet">
+	</head>
+
+<body>
+
+  <nav class="sidebar">
+    <div class="navbar-collapse" id="navbar-collapse">
+      <div class="site-header hidden-xs">
+          <a class="site-brand" href="../home.html" title="">
+            <img class="img-responsive site-logo" alt="" src="../media/logo.png">
+            Educational Website
+          </a>
+        <p>This website will help you to grab and explore the educational information you need.</p>
+      </div>
+	  
+      <ul class="nav">
+        <li><a href="../home.html" title="">Home</a></li>
+        <li><a href="../subjects.html" title="">Subjects </a></li>
+        <li><a href="../announcements.html" title="">Announcements</a></li>
+        <li><a href="../gallery.html" title="">Gallery</a></li>
+        <li><a href="../about.html" title="">About</a></li>
+		<li><a href="../contact.html" title="">Contact</a></li>
+		<li><a href="../signin.html" title="">Sign Out</a></li>
+      </ul>
+	  
+    </div> 
+  </nav>
+  
+	<main class="" id="main-collapse">
+		<h1>Algorithms And Complexity</h1>
+		<h3>An Introduction to the Complexity and Algorithms</h3>
+
+		<p>In computer science, analysis of algorithms is a very crucial part. It is important to find the most efficient algorithm for solving a problem. 
+		It is possible to have many algorithms to solve a problem, but the challenge here is to choose the most efficient one.<br><br>
+
+		Now the point is, how can we recognize the most efficient algorithm if we have a set of different algorithms? Here, the concept of space and time complexity of algorithms comes into existence. 
+		Space and time complexity acts as a measurement scale for algorithms. We compare the algorithms on the basis of their space (amount of memory) and time complexity (number of operations).<br><br>
+
+		The total amount of the computer's memory used by an algorithm when it is executed is the space complexity of that algorithm. 
+		We’ll not discuss space complexity in this article (to make this article a bit smaller).<br><br></p>
+
+		<h4>Time Complexity</h4>
+		<p>So, the time complexity is the number of operations an algorithm performs to complete its task (considering that each operation takes the same amount of time). 
+		The algorithm that performs the task in the smallest number of operations is considered the most efficient one in terms of the time complexity. 
+		However, the space and time complexity are also affected by  factors such as your operating system and hardware, but we are not including them in this discussion.<br><br>
+
+		Now to understand the time complexity, we will take an example in which we’ll compare two different algorithms which are used to solve a particular problem.<br><br>
+
+		The problem is searching. We have to search for an element in an array (in this problem, we are going to assume that the array is sorted in  ascending order). 
+		To solve this problem we have two algorithms:<br><br>
+
+		<u>1. Linear Search.<br>
+		2. Binary Search.</u><br><br>
+
+		Let’s say the array contains ten elements, and we have to find the number ten in the array.<br><br>
+
+		const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];<br>
+		const search_digit = 10;<br><br>
+
+		<b>Linear search</b> algorithm will compare each element of the array to the <b>search_digit</b>. When it finds the search_digit in the array, it will return <b>true</b>.<br><br>
+
+		Now let’s count the number of operations it performs. Here, the answer is 10 (since it compares every element of the array). So,  
+		Linear search uses ten operations to find the given element (these are the maximum number of operations for this array; in the case of Linear search, this is also known as the <u> worst case </u> of an algorithm).<br><br>
+
+		In general, Linear search will take <b>n</b> number of operations in its worst case (where <b>n</b> is the size of the array).<br><br>
+
+		Let’s examine the <b>Binary search</b> algorithm for this case.<br><br>
+
+		Binary search can be easily understood by this example:<br><br></p>
+
+		<img src="../media/aac1.png" style="width:400px;height:200px;">
+
+		<br><br><p>If we try to apply this logic on our problem then, first we’ll compare <b>search_digit</b> with the middle element of the array, 
+		that is 5. Now since 5 is less than 10, then we will start looking for the <b>search_digit</b> in the array elements greater than 5, 
+		in the same way until we get the desired element 10.<br><br>
+
+		Now, try to count the number of operations binary search took to find the desired element. It took approximately four operations. 
+		Now, this was the worst case for binary search. This shows that there is a <u>logarithmic</u> relation between the number of operations 
+		performed and the total size of the array.<br><br>
+
+		number of operations = log(10) = 4(approx)<br>
+		for base 2<br><br>
+
+		We can generalize this result for Binary search as:<br><br>
+
+		For an array of size <b>n</b>, the number of operations performed by the Binary Search is: <b>log(n)</b></p><br>
+
+		<h4>The Big O Notation</h4>
+		<p>In the above statements, we saw that for an array of size <b>n</b>, linear search will perform <b>n</b> operations to complete the search. 
+		On the other hand, Binary search performed <b>log(n)</b> number of operations (both for their worst cases). We can represent this as a graph 
+		(<b>x-axis:</b> number of elements, <b>y-axis:</b> number of operations).</p><br><br>
+
+		<img src="../media/aac2.jpg" style="width:400px;height:200px;">
+
+		<br><br><p>It is quite clear from the figure that the rate by which the complexity increases for Linear search is much faster than that for binary search.<br><br>
+
+		When we analyse an algorithm, we use a notation to represent its time complexity and that notation is Big O notation.<br><br>
+
+		For Example: time complexity for Linear search can be represented as <b>O(n)</b> and <b>O(log n)</b> for Binary search (where, <b>n</b> and <b>log(n)</b> are the number of operations).<br><br>
+
+		The Time complexity or Big O notations for some popular algorithms are listed below:<br><br>
+
+		1. Binary Search: O(log n)<br>
+		2. Linear Search: O(n)<br>
+		3. Quick Sort: O(n * log n)<br>
+		4. Selection Sort: O(n * n)<br>
+		5. Travelling salesperson : O(n!)</p><br>
+
+		<h4>Conclusion</h4>
+		<p>I really appreciate your efforts if you are still reading this article. 
+		Now, you must be thinking - why is time complexity so important to understand?<br><br>
+
+		We know that for a small number of elements (say 10), the difference between the number of operations performed by 
+		binary search and linear search is not so big. But in the real world, most of the time, we deal with  problems that have big chunks of data.<br><br>
+
+		For example, if we have 4 billion elements to search for, then, in its worst case, linear search will take 4 billion 
+		operations to complete its task. Binary search will complete this task in just 32 operations. That’s a big difference. 
+		Now let’s assume that if one operation takes 1 ms for completion, then binary search will take only 32 ms whereas linear search 
+		will take 4 billion ms (that is approx. 46 days). That’s a significant difference.<br><br>
+
+		This is the reason why studying time complexity becomes important when it comes to such a big amount of data.</p>
+	</main>
+
+</body>
+</html>

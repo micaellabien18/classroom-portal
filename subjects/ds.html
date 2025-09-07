@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	  <link href="../media/favicon.ico" rel="icon">
+	  <title>Educational Website</title>
+	  <link href="../style.css" rel="stylesheet">
+	</head>
+
+<body>
+
+  <nav class="sidebar">
+    <div class="navbar-collapse" id="navbar-collapse">
+      <div class="site-header hidden-xs">
+          <a class="site-brand" href="../home.html" title="">
+            <img class="img-responsive site-logo" alt="" src="../media/logo.png">
+            Educational Website
+          </a>
+        <p>This website will help you to grab and explore the educational information you need.</p>
+      </div>
+	  
+      <ul class="nav">
+        <li><a href="../home.html" title="">Home</a></li>
+        <li><a href="../subjects.html" title="">Subjects </a></li>
+        <li><a href="../announcements.html" title="">Announcements</a></li>
+        <li><a href="../gallery.html" title="">Gallery</a></li>
+        <li><a href="../about.html" title="">About</a></li>
+		<li><a href="../contact.html" title="">Contact</a></li>
+		<li><a href="../signin.html" title="">Sign Out</a></li>
+      </ul>
+	  
+    </div> 
+  </nav>
+  
+	<main class="" id="main-collapse">
+		<h1>Discrete Structures</h1>
+		<h3>Sets and Notation</h3>
+		<h4>1.1 Defining sets</h4>
+		<p><b>Definition.</b> A set is an unordered collection of distinct objects. The objects in a
+		set are called the elements, or members, of the set.<br> A set is said to contain its elements.<br><br>
+
+		A set can be defined by simply listing its members inside curly braces. For example,
+		the set {2, 4, 17, 23} is the same as the set {17, 4, 23, 2}. To denote membership we
+		use the ∈ symbol, as in 4 ∈ {2, 4, 17, 23}. On the other hand, non-membership is
+		denoted as in 5 6∈ {2, 4, 17, 23}.<br><br>
+
+		If we want to specify a long sequence that follows a pattern, we can use the ellipsis
+		notation, meaning “fill in, using the same pattern”. The ellipsis is often used after two
+		or more members of the sequence, and before the last one, as follows: {1, 2, . . . , n}.
+		The pattern denoted by the ellipsis should be apparent at first sight! For instance,
+		{1, . . . , n} is generally regarded as underspecified (that is, too ambiguous). Of course,
+		even {1, 2, . . . , n} is still ambiguous—did we mean all integers between 1 and n, all
+		powers of two up to n, or perhaps the set {1, 2, 25, n}?—but is generally sufficient,
+		unless you really do mean all powers of two up to n, in which case {2
+		0
+		, 2
+		1
+		, 2
+		2
+		, . . . , 2
+		k}
+		for an appropriate k is a better choice. The ellipsis can also be used to define an
+		infinite set, as in the following.<br><br>
+
+		<b>Definition.</b> The set of natural numbers or nonnegative integers, denoted by N, is
+		defined as {0, 1, 2, . . .}.<br><br>
+
+		To avoid ambiguities it is often useful to use the set builder notation, which lists
+		on the right side of the colon the property that any set element, specified on the left
+		side of the colon, has to satisfy. Let’s define the positive integers using the set builder
+		notation:<br><br>
+
+		N
+		+ = {x : x ∈ N and x > 0}.
+		<br>We can also write<br>
+		N
+		+ = {x ∈ N : x > 0}.<br><br>
+
+		This is a matter of taste. In general, use the form that will be easiest for the reader
+		of your work to understand. Often it is the least “cluttered” one.<br><br>
+
+		Ok, now onto the integers:<br>
+		Z = {x : x ∈ N or −x ∈ N}.<br>
+		Hmm, perhaps in this case it is actually better to write<br>
+		Z = {. . . , −2, −1, 0, 1, 2, . . .}.<br><br>
+
+		Remember, when you write mathematics, you should keep your readers’ perspective
+		in mind. For now, we—the staff of this course—are your readers. In the future it
+		might be your colleagues, supervisors, or the readers of your published work. In
+		addition to being reasonably formal and unambiguous, your mathematical writing
+		should be as clear and understandable to your intended readership as possible.<br><br>
+
+		Here are the rational numbers:<br>
+		Q ={a/b: a ∈ Z, b ∈ Z, b 6= 0}.
+
+		<br><br>Instead of a ∈ Z, b ∈ Z, you can write a, b ∈ Z, which is more concise and generally
+		more readable. Don’t go overboard, though, with writing something like a, b 6= 0 ∈ Z,
+		this is way too confusing and does not say what you want it to.<br><br>
+
+		Finally, the set of real numbers is denoted by R. All the reals that are not rational
+		are called
+		√
+		irrational. These include the familiar π = 3.1415926..., e = 2.7182818...,
+		2, and infinitely many others. (How do we know that these numbers are irrational,
+		do you ask? Actually, we will see a proof of this for √
+		2 shortly. The proofs for π and
+		e require mathematical analysis and are outside our scope.)<br><br>
+
+		<b>On being formal.</b> Were the above definitions formal enough? The answer is: it
+		depends. For example, defining the natural numbers is an important and non-trivial
+		accomplishment of mathematics. After all, what do these symbols “1”, “2”, “3”,
+		actually mean? These numbers can be formally defined in terms of sets. Even more
+		involved is the formal definition of the reals, usually covered in a first mathematical
+		analysis course.<br><br>
+
+		Here we cannot afford to cover everything in complete detail, which would have to
+		include, among other things, basic algebra and trigonometry. Furthermore, the vast
+		majority of mathematical works, while considered to be “formal”, gloss over details
+		all the time. For example, you’ll be hard-pressed to find a mathematical paper that
+		goes through the trouble of justifying the equation a
+		2 − b
+		2 = (a − b)(a + b). In effect,
+		every mathematical paper or lecture assumes a shared knowledge base with its readers
+		or listeners. It is extremely important for an author of mathematics, such as yourself
+		during this course, to estimate this shared knowledge base correctly!<br><br>
+
+		In CS103X we will assume most of high-school mathematics, including perhaps
+		some AP math like single-variable calculus, as our shared knowledge base. Thus
+		notions and techniques from this base will generally not be justified in lecture, and
+		can be used freely in your homework and exams. Furthermore, once we develop certain
+		2
+		notation or prove some theorem in class, you can use these freely in your homework
+		and exams, provided that you clearly cite the appropriate theorems. In writing and
+		speaking mathematics, a delicate balance is maintained between being formal and
+		not getting bogged down in minutia.1 This balance usually becomes second-nature
+		with experience. You should all get the hang of it by the end of the quarter.<br><br></p>
+
+		<h4>1.2 Set operations</h4>
+		A is said to be a subset of B if and only if every element of A is also an element of B,
+		in which case we write A ⊆ B. A is a strict subset of B if A is a subset of B and A is
+		not equal to B, which is denoted by A ⊂ B. For example, {4, 23} ⊂ {2, 4, 17, 23} ⊆
+		{2, 4, 17, 23}.<br><br>
+
+		Two sets A and B are considered equal if and only if they have the same elements.
+		This is denoted by A = B. More formally, A = B if and only if A ⊆ B and B ⊆ A.
+		For two sets A and B, the operations of union, intersection, and difference are
+		defined as follows:<br><br>
+
+		A ∪ B = {x : x ∈ A or x ∈ B}<br>
+		A ∩ B = {x : x ∈ A and x ∈ B}<br>
+		A \ B = {x : x ∈ A and x 6∈ B}<br>
+		The ∪ and ∩ notation can be extended to the union and intersection of multiple sets.
+		Given n sets A1, A2, . . . , An, we can write<br>
+		[n
+		i=1
+		Ai<br>
+		for their union, and<br>
+		\n
+		i=1
+		Ai<br>
+		for their intersection. In fact, this notation is pretty flexible and the same union can
+		be written as<br>
+		[n
+		i=1
+		Ai =
+		[
+		1≤i≤n
+		Ai =
+		[
+		i∈{x : 1≤x≤n}
+		Ai
+		.<br>
+		Here is another example:<br>
+		\
+		i ∈ {x : 1 ≤ x ≤ 10}
+		i is prime
+		Ai = A2 ∩ A3 ∩ A5 ∩ A7.<br><br>
+
+		Given a set A, the cardinality of A, also known as the size of A, is simply the number
+		of elements in A. The cardinality of A is denoted by |A|. For example, if A =
+		{2, 4, 17, 23}, then |A| = 4.
+		1Of course, what is considered minutia differs from subfield to subfield, and from classroom to
+		classroom.<br><br></p>
+
+		<h4>1.3 More sets</h4>
+		<p>The empty set is denoted by ∅. It is the unique set without elements. It holds that
+		∅ ⊆ A for any set A. Why? By definition, this holds if every element of ∅ is also an
+		element of A. Since ∅ has no elements, all possible statements about the elements of
+		∅ are true! In particular, all elements of ∅ are also elements of A. If this is confusing
+		don’t worry, we will go into such matters more rigorously when we get to logic. (For
+		now, you can ponder the following: If we know for a fact that there are no unicorns
+		<Gasp!>, then it is definitely true that all unicorns have soft light-blue fur.)
+		A set can contain sets as its elements. For example, {{2, 4}, {17}, 23} is a perfectly valid set with three elements, two of them sets. (The second element is
+		a singleton, a set with one element.) Note that {2, 4} ∈ {{2, 4}, {17}, 23}, but
+		{2, 4} ⊆ {2, 4, 17, 23}, and that 17 6∈ {{2, 4}, {17}, 23}, but {17} ∈ {{2, 4}, {17}, 23}.
+		Also, {∅} is not the empty set. (Think about it.)
+		The power set of a set A is the set of all subsets of A, and is denoted by 2A. That
+		is,<br><br>
+
+		2
+		A = {S : S ⊆ A}.<br>
+		For example, for A = {2, 4, 17, 23}, we have<br>
+		2
+		A =
+		
+		∅, {2}, {4}, {17}, {23}, {2, 4}, {2, 17}, {2, 23}, {4, 17}, {4, 23}, {17, 23},
+		{2, 4, 17}, {2, 4, 23}, {2, 17, 23}, {4, 17, 23}, {2, 4, 17, 23}
+		
+		.<br><br>
+
+		The cardinality of this set is 16, and 16 = 24
+		. This is not a coincidence: As we shall
+		see when we get to combinatorics and counting, for a set A with n elements, the
+		cardinality of 2A is 2n
+		. This is in fact the reason for the power set notation.
+		</p>
+	</main>
+
+</body>
+</html>
