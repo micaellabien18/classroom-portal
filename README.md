@@ -1,8 +1,8 @@
 # Classroom Portal
 
-Educational website from my first-year Computer Science coursework. This is my original submission as-is, showcasing fundamental HTML/CSS skills learned during the course.
+A simple frontend website suitable for educational or informational purposes. This project demonstrates basic web development concepts using HTML and CSS.
 
-> **Note:** This represents my foundational web development skills from first year and remains as originally submitted. I plan to refactor and improve this project in the future as I continue learning.
+> **Note:** This demonstrates my foundational HTML/CSS skills from my early Computer Science studies. It is presented in its original form as submitted for coursework. As I continue learning, I plan to refactor and enhance this project to reflect my growth and improved abilities.
 
 ## Features
 
