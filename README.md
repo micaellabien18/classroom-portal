@@ -17,4 +17,4 @@ Educational website from my first-year Computer Science coursework. This is my o
 - HTML5
 - CSS3
 
-**Note:** This is unmodified first-year coursework, demonstrating my foundational web development skills from that period.
+**Note:** This represents my foundational web development skills from first year and remains as originally submitted. I plan to refactor and improve this project in the future as I continue learning.
